@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using NUnit.Framework;
-using Bowling.Core;
+using Sirius.Bowling.Core;
 
-namespace Bowling.Core.Tests
+namespace Sirius.Bowling.Core.Tests
 {
     [TestFixture]
     public class BowlingRecorderTests

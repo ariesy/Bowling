@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bowling.Core.Tests
+namespace Sirius.Bowling.Core.Tests
 {
     [TestFixture]
     public class BowlingMachineTests
@@ -26,7 +26,6 @@ namespace Bowling.Core.Tests
             {
                 Assert.LessOrEqual( throw1 + throw2, 10);
             }
-
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 
-namespace Bowling.Core
+namespace Sirius.Bowling.Core
 {
     public class Frame
     {
