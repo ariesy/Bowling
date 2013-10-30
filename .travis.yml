@@ -1,0 +1,8 @@
+language: c
+ 
+install:
+  - sudo apt-get install mono-devel mono-gmcs nunit-console
+ 
+script:
+  - xbuild CI.proj
+  - nunit-console ./Bowling.Tests/bin/Debug/Sirius.Bowling.Core.Tests.dll -exclude Integration,NotWorkingOnMono
