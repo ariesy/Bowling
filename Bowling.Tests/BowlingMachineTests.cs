@@ -35,7 +35,7 @@ namespace Sirius.Bowling.Core.Tests
 
             var throw5 = target.Throw(-100);
             Assert.LessOrEqual(throw5, 10);
-            Assert.Greater(throw5, 0);
+            Assert.GreaterOrEqual(throw5, 0);
         }
     }
 }
