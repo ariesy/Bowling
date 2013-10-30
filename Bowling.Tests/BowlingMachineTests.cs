@@ -26,6 +26,16 @@ namespace Sirius.Bowling.Core.Tests
             {
                 Assert.LessOrEqual( throw1 + throw2, 10);
             }
+
+            var throw3 = target.Throw(3);
+            Assert.AreEqual(3, throw3);
+
+            var throw4 = target.Throw(1000);
+            Assert.LessOrEqual(throw4, 7);
+
+            var throw5 = target.Throw(-100);
+            Assert.LessOrEqual(throw5, 10);
+            Assert.Greater(throw5, 0);
         }
     }
 }

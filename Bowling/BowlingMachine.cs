@@ -18,23 +18,26 @@ namespace Sirius.Bowling.Core
 
         public int Throw(int customNumber = int.MinValue)
         {
-            if (customNumber == int.MinValue)
+            int tr;
+            if (customNumber == int.MinValue || customNumber < 0 || customNumber >10)
             {
                 if (this.recorder.NewFrame)
                 {
-                    var tr = random.Next(0, 10);
-                    recorder.GetThrow(tr);
-                    return tr;
+                    tr = random.Next(0, 10);
+                    
                 }
                 else
                 {
-                    var tr = random.Next(0, 10 - recorder.CurrentFrame.Tries[0].Tr);
-                    recorder.GetThrow(tr);
-                    return tr;
+                    tr = random.Next(0, 10 - recorder.CurrentFrame.Tries[0].Tr);
                 }
             }
+            else
+            {
+                tr = customNumber;
+            }
 
-            return customNumber;
+            recorder.GetThrow(tr);
+            return tr;
         }
 
         public string[] GetCurrentFrameScore()
