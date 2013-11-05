@@ -40,9 +40,14 @@ namespace Sirius.Bowling.Core
             return tr;
         }
 
-        public string[] GetCurrentFrameScore()
+        public string[] GetFrameScore(int frameNum)
         {
-            throw new NotImplementedException();
+            if (frameNum > recorder.Frames.Count || frameNum < 0)
+            {
+                return new string[] { string.Empty, string.Empty };
+            }
+
+            return recorder.Frames[frameNum].Tries.Select(tr => tr.TryToAdd == 0 ? tr.Score.ToString() : "X").ToArray();
         }
     }
 }
