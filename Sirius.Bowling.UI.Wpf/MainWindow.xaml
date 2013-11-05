@@ -6,7 +6,6 @@
     <StackPanel HorizontalAlignment="Left" Height="319" VerticalAlignment="Top" Width="560">
         <StackPanel Height="40">
             <StackPanel Height="100" Orientation="Horizontal">
-                <StackPanel Width="50"/>
             </StackPanel>
             <Button x:Name="BtnThrow" Content="Throw" HorizontalAlignment="Left" Width="75" Click="BtnThrow_Click" VerticalAlignment="Top"/>
         </StackPanel>
